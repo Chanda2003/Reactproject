@@ -1,0 +1,25 @@
+
+
+.Card  {
+    display: inline-flex !important;
+    margin-left: 68px !important;
+  
+    height: 550px !important;
+ 
+    background-color: rgb(224, 241, 235) !important;
+    /* background-color: rgb(8, 215, 194); */
+    margin-top: 30px !important;
+    box-shadow: 8px 8px 16px #05058e;
+     
+
+}
+
+.Image{
+    height: 260px;
+    width: 250px;
+    text-align: center;
+    /* background-color: aquamarine; */
+}
+.Card :hover{
+    scale: 0.9;
+ }

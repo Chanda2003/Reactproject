@@ -1,0 +1,27 @@
+ /* .Nav{
+    width:auto ;
+    height: 100% !important;
+} */
+
+.img{  
+   height: 30px;
+   /* color: white; 
+   background-color: rgb(245, 245, 220); */
+} 
+/* 
+ .tertiary{
+ 
+    background: linear-gradient(rgb(206, 136, 216) ,rgb(157, 223, 115));
+}  */
+.link{
+    text-decoration: none;
+    font-size: 20px;
+    /* color: #0e0f0f; */
+    color: white;
+    font-weight: bold;
+   
+    /* text-shadow: 2px 2px 4px  hsl(200, 3%, 55%); */
+
+}
+
+
