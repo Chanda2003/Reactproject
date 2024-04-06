@@ -6,14 +6,24 @@ import "./Card-style.css"
 import SizesExample from "./Spinners/Spinner";
 import { useDispatch } from "react-redux";
 import { ADD_TO_CART } from "./Redux/Action/Action";
+import { Link } from "react-router-dom";
+import { REMOVE_CART_ITEMS } from "./Redux/Action/Action";
+import { useNavigate } from "react-router-dom";
 
 
 function ReactCard(){
     const dispatch=useDispatch()
+    const Back=useNavigate()
 
     const send=(eachobject)=>{
          dispatch(ADD_TO_CART(eachobject))
     }
+
+    const send1=(id)=>{
+      dispatch(REMOVE_CART_ITEMS(id))
+      alert("Product is sucessfully")
+      Back("/products")
+  }
 
    const[products,setProducts]=useState([])
    console.log(products)
@@ -59,7 +69,9 @@ products.map((eachobject)=>{
     return(
         <>
 <Card className="Card" style={{ width: '18rem' }}>
+  <Link to={`/${eachobject.category}/${eachobject.id}`}>
   <Card.Img className="Image" variant="top" src={eachobject.images[0]} />
+  </Link>
   <Card.Body>
     <Card.Title>{eachobject.title}</Card.Title>
     <Card.Text>
@@ -67,7 +79,9 @@ products.map((eachobject)=>{
     </Card.Text>
     <div style={{fontSize:"20px",color:"black"}}><span style={{fontWeight:"bold",fontSize:"25px"}}>Price :</span> ₹  {eachobject.price}</div>
     <br></br>
-    <Button variant="primary" style={{width:"260px"}} onClick={()=>send(eachobject)}>Add to card</Button>
+    <Button variant="primary" style={{width:"150px",margin:"2px"}} onClick={()=>send(eachobject)}>Add to card</Button>
+    {/* <br></br>  */}
+    <Link to={`/productdetails/buy/${eachobject.id}`} style={{textDecoration:"none",color:"white"}}><Button variant="primary" style={{width:"100px"}} onClick={()=>send(eachobject)}>Buy Now</Button></Link>
   </Card.Body>
 </Card>
         </>

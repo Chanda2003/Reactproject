@@ -6,9 +6,10 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { REMOVE_CART_ITEMS, REMOVE_ONE_ITEAM } from "../../Redux/Action/Action";
 import { ADD_TO_CART } from "../../Redux/Action/Action";
+// import { Button } from "react-bootstrap";
 
 
-function ProductDetails(){
+function Buyproduct(){
     const [data,setData]=useState([])
 // console.log(data)
 const {id}=useParams()
@@ -19,7 +20,7 @@ const Back=useNavigate()
 const dispatch=useDispatch()
 
 const getdata=useSelector((state)=>state.ReducerAction.card)
-// console.log(getdata)
+console.log(getdata)
 const compare=()=>{
 
     let comparedata=getdata.filter((ids)=>{
@@ -41,6 +42,12 @@ const send=(eachobject)=>{
 
 const del=(id)=>{
     dispatch(REMOVE_CART_ITEMS(id))
+    Back("/products")
+}
+
+const del1=(id)=>{
+    dispatch(REMOVE_CART_ITEMS(id))
+    alert("product is Buy sucessfully")
     Back("/products")
 }
 
@@ -91,6 +98,8 @@ const remove=(Item)=>{
                             <p><strong>Rating :</strong> <span style={{backgroundColor:' rgb(8, 215, 194)',color:"black",padding:"4px 10px",fontSize:"20px",borderRadius:"10px"}}>{items.rating} ★</span></p>
                             <p><strong>Stock :</strong> {items.stock}</p>
                             <p><strong>Remove : </strong> <i className="fas fa-trash" style={{color:"red",cursor:"pointer"}} onClick={()=>del(items.id)}></i></p>
+                        {/* <button onClick={onClick={()=>del1(items.id)}}>Buy Now</button> */}
+                        <button onClick={()=>del1(items.id)}>Buy Now</button>
                         </td>
                     </tr>
                 </Table>
@@ -106,4 +115,4 @@ const remove=(Item)=>{
         </>
     )
 }
-export default ProductDetails
+export default Buyproduct

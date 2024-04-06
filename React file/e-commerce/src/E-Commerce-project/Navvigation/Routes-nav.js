@@ -8,6 +8,10 @@ import Smartphone from "./Routes-pages/Smartphone"
 import Laptops from "./Routes-pages/laptops"
 import Fragrances from "./Routes-pages/fragrance"
 import Skincare from "./Routes-pages/skincare"
+import ProductData from "./Routes-pages/Product-data"
+import Buyproduct from "./Routes-pages/Buy-products"
+import Cardbuy from "./Routes-pages/Buy-page"
+
 
 
 
@@ -27,6 +31,10 @@ function Navigation(){
             <Route path="/products/Laptops" Component={Laptops}></Route>
             <Route path="/products/fragrances" Component={Fragrances}></Route>
             <Route path="/products/Skincare" Component={Skincare}></Route>
+            <Route path="/:category/:id" Component={ProductData}></Route>
+            <Route path="/productdetails/buy/:id" Component={Buyproduct}></Route>
+            <Route path="/productdetails/buy" Component={Cardbuy}></Route>
+
         </Routes>
         </BrowserRouter>
 

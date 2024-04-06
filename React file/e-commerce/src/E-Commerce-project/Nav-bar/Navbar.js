@@ -12,9 +12,9 @@ import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Table from 'react-bootstrap/Table';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { REMOVE_CART_ITEMS } from '../Redux/Action/Action';
+import { REMOVE_CART_ITEMS ,CLEAR_ALL} from '../Redux/Action/Action';
 
 // function NavBar() {
 
@@ -133,7 +133,8 @@ function NavBar() {
 
   const getdata=useSelector((state)=>state.ReducerAction.card)
 
-console.log(getdata)
+// console.log(getdata)
+const Back=useNavigate()
 
 const dispatch=useDispatch()
 
@@ -149,6 +150,11 @@ const closeCart = () => {
 
 const del=(id)=>{
   dispatch( REMOVE_CART_ITEMS(id))
+}
+const del1=()=>{
+  dispatch( CLEAR_ALL())
+  alert("product is Buy sucessfully")
+    Back("/products")
 }
 
 const total=()=>{
@@ -220,6 +226,8 @@ useEffect(()=>{
                   })
                 }
                 <p><strong>Total</strong> : ₹ {price}</p>
+                {/* <button onClick={del1}>Buy Now</button> */}
+                <Link to={"/productdetails/buy"}><button>Buy Now</button></Link>
               </tbody>
             </Table>
             </div>

@@ -48,6 +48,9 @@ export const ReducerAction=(state=instialstate,action)=>{
                             ...state,card:data
                         }
                     }
+
+                    case "REMOVE_CARD":
+                        return{...state,card:[]}
             default :
             return state
 

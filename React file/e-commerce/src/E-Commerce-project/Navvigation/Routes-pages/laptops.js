@@ -47,7 +47,9 @@ function Laptops(){
     return(
         <>
 <Card className="Card" style={{ width: '18rem' }}>
+<Link to={`/${eachobject.category}/${eachobject.id}`}>
   <Card.Img className="Image" variant="top" src={eachobject.images[0]} />
+  </Link>
   <Card.Body>
     <Card.Title>{eachobject.title}</Card.Title>
     <Card.Text>
@@ -55,7 +57,9 @@ function Laptops(){
     </Card.Text>
     <div style={{fontSize:"20px",color:"black"}}><span style={{fontWeight:"bold",fontSize:"25px"}}>Price :</span> ₹  {eachobject.price}</div>
     <br></br>
-    <Button variant="primary" style={{width:"260px"}} onClick={()=>send(eachobject)}>Add to card</Button>
+    <Button variant="primary" style={{width:"150px",margin:"2px"}} onClick={()=>send(eachobject)}>Add to card</Button>
+    <Link to={`/productdetails/buy/${eachobject.id}`} style={{textDecoration:"none",color:"white"}}><Button variant="primary" style={{width:"100px"}} onClick={()=>send(eachobject)}>Buy Now</Button></Link>
+
   </Card.Body>
 </Card>
         </>

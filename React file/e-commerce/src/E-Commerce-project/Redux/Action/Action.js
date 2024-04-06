@@ -1,3 +1,5 @@
+// import { type } from "@testing-library/user-event/dist/type"
+
 
 
 
@@ -20,5 +22,10 @@ export function REMOVE_ONE_ITEAM(Item){
     return{
         type:"REV_ONE",
         payload:Item
+    }
+}
+export function CLEAR_ALL(){
+    return{
+        type:"REMOVE_CARD"
     }
 }
