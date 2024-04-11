@@ -1,0 +1,13 @@
+.input{
+    /* border: 40px; */
+    font-size: 30px;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+.button{
+    margin-left: 40%;
+    box-shadow: 2px 2px 2px 2px;
+    background-color: rgb(177, 237, 237);
+    color: black;
+
+}

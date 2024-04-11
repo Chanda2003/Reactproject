@@ -1,0 +1,8 @@
+
+
+.but{
+   padding: 10px;
+   margin: 10px;
+   box-shadow: 4px 4px 10px hsl(278, 16%, 10%);
+   border-radius: 15px;
+}

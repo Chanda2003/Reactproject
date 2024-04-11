@@ -1,0 +1,36 @@
+
+
+.items_img{
+    height: 300px;
+    width: 300px;
+}
+.items_img img{
+    height: 300px;
+    width: 300px;
+    margin-left: 60px;
+    /* margin-top: ; */
+}
+.details{
+    position: absolute;
+    top: 0px;
+    left: 400px;
+}
+h1{
+    text-align: center;
+    /* position: relative; */
+    /* top: -60px; */
+    /* left: -60px; */
+}
+.container{
+   
+    position: relative;
+    top: 10px;
+}
+
+/* @media screen and (max-width: 480px) {
+
+    
+    
+} */
+
+
