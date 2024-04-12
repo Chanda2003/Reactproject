@@ -3,6 +3,10 @@
 .but{
    padding: 10px;
    margin: 10px;
-   box-shadow: 4px 4px 10px hsl(278, 16%, 10%);
+   box-shadow: 4px 4px 8px ;
    border-radius: 15px;
+}
+.but:hover{
+   background-color: black;
+   color: white;
 }

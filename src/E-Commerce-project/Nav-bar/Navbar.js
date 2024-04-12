@@ -62,7 +62,7 @@ useEffect(()=>{
 },[total])
 
   return (
-    <Navbar expand="lg"  bg="light"  variant="light">
+    <Navbar expand="lg"   style={{backgroundColor:"gray",color:"gray"}}>
       <Container>
         <Navbar.Brand><Link to={"/"} className='link' >Shop Now</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

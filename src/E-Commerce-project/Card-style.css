@@ -6,7 +6,7 @@
   
     height: 350px !important;
  
-    background-color: rgb(224, 241, 235) !important;
+    /* background-color: rgb(224, 241, 235) !important; */
     /* background-color: rgb(8, 215, 194); */
     margin-top: 30px !important;
     box-shadow: 8px 8px 16px #05058e;
@@ -16,10 +16,11 @@
 
 .Image{
     height: 180px;
-    width: 250px;
-    text-align: center;
+    width: 180px !important;
+    margin-left: 20%;
+    /* text-align: center !important; */
     /* background-color: aquamarine; */
 }
-.Card :hover{
+.Image :hover{
     scale: 0.9;
  }
